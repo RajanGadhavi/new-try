@@ -1,0 +1,77 @@
+.card{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px  solid rgba(110, 110, 110, 0.3);
+    transition: all 250ms ease-in-out;
+}
+
+.card .product-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card .product-img .img{
+    /* background-image: url('../../../../public/imgs/Braclet.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.card .product-details{
+    padding: 10px;
+    margin: 10px;
+}
+
+.card .product-details p,h3{
+    margin: 5px ;
+}
+
+.card .product-details button{
+    margin: 5px  ;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    background-color: #7575c7;
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+
+.card .product-details button:hover{
+    background-color: #7575c7a4;
+}
+
+.card:hover{
+    transform: translateY(-2.5px) translateX(-2.5px) ;
+    box-shadow: 0px 5px 5px 5px rgba(110, 110, 110, 0.3);
+    border: 1px transparent;
+}
+.card .product-img img{
+    max-width:100%;
+    height: 400px;
+    display: block;
+}
+
+@media (max-width:768px) {
+    .card .product-img .img{
+        min-width: 300px;
+        min-height: 250px;
+    }
+
+    .card:hover{
+        transform: translateY(-5px) translateX(0px) scale(1.01);
+        box-shadow: 0px 5px 5px 5px rgba(110, 110, 110, 0.3);
+        border: 1px transparent;
+    }
+
+    .card .product-img img{
+        max-width:100%;
+        height: auto;
+        display: block;
+    }
+}

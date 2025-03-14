@@ -1,0 +1,130 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+    min-height: 90dvh;
+}
+
+.header .tittle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.header .tittle .banner-text{
+    width: 250px;
+    height: 100px;
+    background-image: url('../../../../public/ResinArt.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -60px;
+    left: -15px;
+    transform:skewX(20deg) skewY(5deg);
+
+}
+
+.header .tittle p{
+    line-height: 1.5rem;
+    margin: 15px 0px;
+}
+
+.header .tittle button{
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 15px 0;
+    border: 1px transparent;
+    border-radius: 10px;
+    background-color: #7575c7;
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+
+.header .tittle button:hover{
+    background-color: #7575c7a4;
+}
+
+.header .main-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.header .main-img .home-img{
+    width: 480px;
+    height: 555px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 10px 25px  15px rgba(0, 0, 0, 0.3);
+}
+
+.top-product{
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-product .tittle{
+    padding: 5px;
+    margin: 5px 0px;
+}
+
+.top-product .product-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+}
+
+@media (max-width : 768px) {
+    .header{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        min-height: 85dvh;
+    }
+
+    .header .tittle {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .header .main-img{
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .header .tittle .banner-text{
+        position: absolute;
+        left: -25px;
+        top: -50px;
+    }
+
+    .header .main-img .home-img{
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+        box-shadow: 0px 10px 25px  15px rgba(0, 0, 0, 0.4);
+    }
+
+    .top-product .product-card{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+}
