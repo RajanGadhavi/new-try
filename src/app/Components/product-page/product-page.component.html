@@ -1,11 +1,11 @@
 <div class="product-page">
     <div class="top">
         <div class="big-img">
-            <img src="" alt="">
+            <img [src]="product.imgPath" alt="">
         </div>
         <div class="product-details">
-            <h2>Product Name</h2>
-            <h3>Price</h3>
+            <h2>{{product.title}}</h2>
+            <h3>Price : {{product.price}}</h3>
             <h4>Product Description</h4>
             <span>
                 <button type="button" class="btn">Buy now</button>

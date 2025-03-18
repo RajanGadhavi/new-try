@@ -8,7 +8,7 @@ import { ProductPageComponent } from "./Components/product-page/product-page.com
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, ProductPageComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
   standalone:true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
