@@ -21,13 +21,26 @@ export class ProductCardComponent {
   
   @Input() imgPath: string = '';
   @Input() title: string = '';
-  @Input() price: number | string = '';
-  @Input() id: number | string = '';
+  @Input() price: number = 0;
+  @Input() id: number = 0;
 
   constructor(private router : Router) {}
 
   sendData() {
     this.router.navigate(['/product'], {
+      state: {
+        product: {
+          id: this.id,
+          title: this.title,
+          price: this.price,
+          imgPath: this.imgPath,
+        },
+      },
+    });
+  }
+
+  buyNow() {
+    this.router.navigate(['/checkout'], {
       state: {
         product: {
           id: this.id,

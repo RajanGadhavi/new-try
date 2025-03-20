@@ -9,14 +9,21 @@ import { Subscription } from 'rxjs';
   imports: [CommonModule],
   standalone: true,
   templateUrl: './product-page.component.html',
-  styleUrls: ['./product-page.component.css']
+  styleUrls: ['./product-page.component.css'],
 })
 export class ProductPageComponent {
-  product:{id: number | string; title: string; price: number | string; imgPath: string} | undefined;
-  
-  constructor(private router :Router){}
+  product:
+    | {
+        id: number | string;
+        title: string;
+        price: number;
+        imgPath: string;
+      }
+    | undefined;
 
-  ngOnInit(){
+  constructor(private router: Router) {}
+
+  ngOnInit() {
     this.product = history.state.product;
   }
 }

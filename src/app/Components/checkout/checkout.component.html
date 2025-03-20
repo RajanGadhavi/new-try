@@ -1,1 +1,22 @@
-<p>checkout works!</p>
+<div class="main">
+  <div class="empty"></div>
+  <div class="full">
+    <div class="product-info">
+      <h1>Buy Now</h1>
+      <h3>Product name {{product?.title}}</h3>
+      <p>Price : {{product?.price}}</p>
+      <span>
+        <button type="button" (click)="reduce()">-</button>
+        <input type="text" value="{{quantity}}" readonly/>
+        <button type="button" (click)="increase()">+</button>
+      </span>
+    </div>
+    <div class="price-info">
+      <h3>Product price : {{product?.price}} </h3>
+      <h5>Shipping charges : {{shipping}}</h5>
+      <h5>Tax : {{tax}}</h5>
+      <h3>Total : {{total}}</h3>
+      <button type="button">Check out now</button>
+    </div>
+  </div>
+</div>
