@@ -7,6 +7,7 @@
 - **18/3**: Trying to pass data from one component to another.
 - **20/3**: Used router state to share data. Added some components.
 - **20/3**: Buy now page is working now.
+- **20/3**: Added 404 page.
 
 ---
 
