@@ -1,28 +1,42 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
+
+export interface ProductInterface{
+  imgPath: string ;
+  title: string;
+  price: number | string;
+  id: number | string; 
+}
 
 @Component({
   selector: 'app-product-card',
   imports: [CommonModule],
   standalone: true,
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.css',
+  styleUrls: ['./product-card.component.css'], 
 })
-export class ProductCardComponent {
 
-  @Input() product!: { id: number; title: string; price: number | string; imgPath: string; };
+export class ProductCardComponent {
   
   @Input() imgPath: string = '';
   @Input() title: string = '';
   @Input() price: number | string = '';
   @Input() id: number | string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router : Router) {}
 
-  openProduct() {
-    this.router.navigate(['/product'],{
-      state:{imgPath:this.imgPath,title:this.title,price:this.price,id:this.id,product:this.product}
+  sendData() {
+    this.router.navigate(['/product'], {
+      state: {
+        product: {
+          id: this.id,
+          title: this.title,
+          price: this.price,
+          imgPath: this.imgPath,
+        },
+      },
     });
   }
+
 }
