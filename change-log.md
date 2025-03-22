@@ -8,10 +8,9 @@
 - **20/3**: Used router state to share data. Added some components.
 - **20/3**: Buy now page is working now.
 - **20/3**: Added 404 page.
+- **21/2**: Firebase auth working
 
 ---
 
 ## Future Plans
-1. Add a checkout page.
-2. Implement user authentication.
 3. Optimize performance for large datasets.

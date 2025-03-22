@@ -1,7 +1,7 @@
 .nav {
   display: flex;
   padding: 15px;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   box-shadow: 0px 10px 150px 5px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -25,26 +25,41 @@
   transition: all 250ms ease-in-out;
 }
 
-.nav ul li a {
+a{
   text-decoration: none;
-  color: inherit;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  transition: all 250ms ease-in-out;
+}
+
+.active-link {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 900; 
+  text-decoration: none;
+  transition: all 250ms ease-in-out; 
+}
+
+.active-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+a:hover {
+  color: rgba(0, 0, 0, 1);
 }
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-#toggle{
+#toggle {
   display: none;
 }
 
-.menu-icon{
+.menu-icon {
   display: none;
 }
 
-
-@media (max-width : 768px) {
-  .nav .btn{
+@media (max-width: 768px) {
+  .nav .btn {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -59,29 +74,28 @@
     overflow: visible;
   }
 
-  .btn li{
+  .btn li {
     text-align: center;
     padding: 10px 0;
     transition: all 250ms ease-in-out;
   }
 
-  .menu-icon{
+  .menu-icon {
     display: block;
   }
 
-  #toggle:checked ~ .menu-icon + .btn{
+  #toggle:checked ~ .menu-icon + .btn {
     display: flex;
     max-height: 500px;
     opacity: 1;
   }
 
-  .nav{
+  .nav {
     justify-content: space-between;
     overflow: visible;
   }
-
 }
 
-.btn li:hover{
+.btn li:hover {
   color: rgb(20, 137, 184);
 }

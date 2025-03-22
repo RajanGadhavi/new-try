@@ -51,5 +51,6 @@ export class CheckoutComponent {
     if (this.product) {
       const price = Number(this.product.price);
       this.total = this.quantity * (price + price * 0.1 + price * 0.15);
-    }}
+    }
+  }
 }
