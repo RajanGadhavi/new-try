@@ -8,7 +8,7 @@
 - **20/3**: Used router state to share data. Added some components.
 - **20/3**: Buy now page is working now.
 - **20/3**: Added 404 page.
-- **21/2**: Firebase auth working
+- **21/2**: Firebase auth working, Added more product in shop.
 
 ---
 
